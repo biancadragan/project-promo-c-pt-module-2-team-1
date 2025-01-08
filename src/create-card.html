@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProCard Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="icon" href="../public/favicon.png" />
+</head>
+
+<body>
+    <main class="create-card__main">
+        <!-- Formulario -->
+        <section class="create-card__form-section">
+            <form class="form">
+                <!-- Colapsable 1: Diseño -->
+                <fieldset class="collapsible collapsible-design">
+                    <legend class="collapsible__title">Diseña</legend>
+                    <div class="collapsible__content">
+                        <label for="palette1" class="palette">
+                            <input type="radio" id="palette1" name="theme" value="theme1" checked>
+                            <div class="palette__colors">
+                                <span style="background-color: #264653;"></span>
+                                <span style="background-color: #2a9d8f;"></span>
+                                <span style="background-color: #e9c46a;"></span>
+                            </div>
+                        </label>
+                        <label for="palette2" class="palette">
+                            <input type="radio" id="palette2" name="theme" value="theme2">
+                            <div class="palette__colors">
+                                <span style="background-color: #f4a261;"></span>
+                                <span style="background-color: #e76f51;"></span>
+                                <span style="background-color: #d62828;"></span>
+                            </div>
+                        </label>
+                        <label for="palette3" class="palette">
+                            <input type="radio" id="palette3" name="theme" value="theme3">
+                            <div class="palette__colors">
+                                <span style="background-color: #8ecae6;"></span>
+                                <span style="background-color: #219ebc;"></span>
+                                <span style="background-color: #023047;"></span>
+                            </div>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Colapsable 2: Rellenar -->
+                <fieldset class="collapsible collapsible-fill">
+                    <legend class="collapsible__title">Rellenar</legend>
+                    <div class="collapsible__content">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" placeholder="Ej: Sally Jill">
+                        <label for="job">Puesto</label>
+                        <input type="text" id="job" placeholder="Ej: Front-end unicorn">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Ej: sally.jill@gmail.com">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" placeholder="Ej: 555-55-55-55">
+                        <label for="linkedin">LinkedIn</label>
+                        <input type="url" id="linkedin" placeholder="Ej: linkedin.com/in/sally-hill">
+                        <label for="github">GitHub</label>
+                        <input type="url" id="github" placeholder="Ej: github.com/sally-hill">
+                    </div>
+                </fieldset>
+
+                <!-- Colapsable 3: Compartir -->
+                <fieldset class="collapsible collapsible-share">
+                    <legend class="collapsible__title">Compartir</legend>
+                    <div class="collapsible__content">
+                        <button type="button" class="share-button">Facebook</button>
+                        <button type="button" class="share-button">Twitter</button>
+                        <button type="button" class="share-button">LinkedIn</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Tarjeta de previsualización -->
+        <section class="preview-section">
+            <div class="preview-card">
+                <h2 id="preview-name">Nombre Apellido</h2>
+                <p id="preview-job">Front-end Developer</p>
+                <div class="preview-links">
+                    <a href="#" id="preview-email">✉️</a>
+                    <a href="#" id="preview-phone">📞</a>
+                    <a href="https://www.linkedin.com" target="_blank" id="linkedin-icon">🔗</a>
+    <a href="https://github.com" target="_blank" id="github-icon">🐙</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
+
+</body>
+
+</html>
