@@ -1,15 +1,19 @@
 .landing {
 
     &__logo {
-        width: 300px;
+        width: 400px;
     }
 
     &__title {
-        color: #ffdd00;
+        color: $secondary-color;
+        font-family: $fontfamily-title-landing;
+        font-weight: $fontweight-title-landing;
+        font-size: $fontsize-title-landing;
+        font-style: $fontstyle-title-landing;
     }
 
     &__icons {
-        border: 1px solid #ffdd00;
+        border: 1px solid $secondary-color;
         border-radius: 5%;
         margin-inline: 2rem;
         display: flex;
