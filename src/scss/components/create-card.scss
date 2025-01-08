@@ -63,7 +63,7 @@
     border-radius: 4px;
   }
 
-  &__btn {
+  &__add-btn {
     background-color: $primary-color;
     color: white;
     border: none;
@@ -74,6 +74,31 @@
     margin-bottom: 1rem;
     width: 50%;
     align-self: center;
+  }
+
+  &__create_btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: $primary-color;
+    color: white;
+    width: 50%;
+    font-size: 1rem;
+    align-self: center;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  &__icon_create_btn {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
   }
 
 }
