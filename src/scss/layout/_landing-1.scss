@@ -1,7 +1,13 @@
 .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 
     &__logo {
-        width: 400px;
+        width: 500px;
     }
 
     &__title {
@@ -22,15 +28,16 @@
 
     &__icons {
         border: 1px solid $primary-color;
-        border-radius: 5%;
-        margin-inline: 2rem;
+        border-radius: 15px;
+        margin: 2rem;
+        padding: 1rem 2rem ;
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 50px;
     }
 
     &__icon {
-        width: 30px;
+        width: 50px;
         margin-top: 10px;
     }
 
@@ -38,5 +45,21 @@
         font-family: $fontfamily-subtitle-landing;
         color: $primary-color;
         text-align: center;
+    }
+
+    &__comenzar {
+        font-family: $fontfamily-subtitle-landing;
+        font-weight: 500;
+        background-color: $secondary-color;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 25px;
+        margin: 5rem;
+
+        &:hover {
+            background-color: $primary-color;
+        }
     }
 }
