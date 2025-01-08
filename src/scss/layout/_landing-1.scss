@@ -5,15 +5,23 @@
     }
 
     &__title {
-        color: $secondary-color;
+        color: $primary-color;
         font-family: $fontfamily-title-landing;
         font-weight: $fontweight-title-landing;
         font-size: $fontsize-title-landing;
         font-style: $fontstyle-title-landing;
     }
 
+    &__subtitle {
+        font-family: $fontfamily-subtitle-landing;
+        font-weight: $fontweight-subtitle-landing;
+        font-size: $fontsize-subtitle-landing;
+        font-style: $fontstyle-subtitle-landing;
+        color: $secondary-color;
+    }
+
     &__icons {
-        border: 1px solid $secondary-color;
+        border: 1px solid $primary-color;
         border-radius: 5%;
         margin-inline: 2rem;
         display: flex;
@@ -27,6 +35,8 @@
     }
 
     &__icontext {
+        font-family: $fontfamily-subtitle-landing;
+        color: $primary-color;
         text-align: center;
     }
 }
