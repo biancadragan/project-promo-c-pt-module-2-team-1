@@ -1,4 +1,5 @@
-/* Estructura principal */
+// Estructura principal 
+
 .create-card__main {
   display: flex;
   flex-direction: column;
@@ -13,7 +14,7 @@
   }
 }
 
-/* Sección del formulario */
+// Sección del formulario 
 .form-section {
   flex: 1;
 }
@@ -23,6 +24,10 @@
   border: 1px solid #ccc;
   margin-bottom: 1rem;
 
+  &__h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
 
   &__image {
     height: 1rem;
@@ -35,13 +40,36 @@
     cursor: pointer;
   }
 
+  &__content {
+    padding: 1rem;
+  }
+
 }
 
-.collapsible__content {
-  padding: 1rem;
+
+// Paletas de colores 
+
+.palette {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 1rem;
+  cursor: pointer;
+
+  &__colors {
+    display: flex;
+    gap: 5px;
+    margin-left: 2rem;
+  }
+
+  &__square {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
 }
 
-/* Tarjeta de previsualización */
+// Tarjeta de previsualización 
 .preview-section {
   flex: 1;
   text-align: center;
@@ -64,7 +92,7 @@
   font-size: 1.5rem;
 }
 
-/* Responsivo */
+// Responsive 
 @media (min-width: 768px) {
 
   .form-section,
