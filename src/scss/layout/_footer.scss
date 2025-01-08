@@ -1,0 +1,25 @@
+.footer {
+
+    border-top: 1px solid $secondary-color;
+    margin-top: 2rem;
+
+    &__list {
+        display: flex;
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        list-style: none;
+    }
+
+    &__text {
+        font-size: 0.75rem;
+        font-family: $fontfamily-subtitle-landing;
+
+    }
+
+    &__logo {
+        height: 40px;
+
+    }
+}
