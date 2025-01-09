@@ -6,12 +6,11 @@
     text-align: center;
 
     &__logo {
-        width: 500px;
+        width: 330px;
+        margin-top: 100px;
 
-        @media (min-width:320px) {
-            width: 330px;
-            margin-top: 200px;
-
+        @media (min-width:768px) {
+            width: 500px;
         }
     }
 
@@ -19,25 +18,25 @@
         color: $primary-color;
         font-family: $fontfamily-title-landing;
         font-weight: $fontweight-title-landing;
-        font-size: $fontsize-title-landing;
         font-style: $fontstyle-title-landing;
+        font-size: 24px;
+        margin-top: 20px;
 
-        @media (min-width:320px) {
-            font-size: 24px;
-            margin-top: 20px;
+        @media (min-width:768px) {
+            font-size: $fontsize-title-landing;
         }
     }
 
     &__subtitle {
         font-family: $fontfamily-subtitle-landing;
         font-weight: $fontweight-subtitle-landing;
-        font-size: $fontsize-subtitle-landing;
+        font-size: 16px;
         font-style: $fontstyle-subtitle-landing;
         color: $secondary-color;
+        margin-inline: 10px;
 
-        @media (min-width:320px) {
-            font-size: 16px;
-            margin-inline: 10px;
+        @media (min-width:768px) {
+            font-size: $fontsize-subtitle-landing;
         }
     }
 
@@ -45,23 +44,23 @@
         border: 1px solid $primary-color;
         border-radius: 15px;
         margin: 2rem;
-        padding: 1rem 2rem;
+        padding: 10px;
         display: flex;
         justify-content: center;
-        gap: 50px;
+        gap: 25px;
 
-        @media (min-width:320px) {
-            gap: 25px;
-            padding: 10px;
+        @media (min-width:768px) {
+            gap: 50px;
+            padding: 1rem 2rem;
         }
     }
 
     &__icon {
-        width: 50px;
+        width: 30px;
         margin-top: 10px;
 
-        @media (min-width:320px) {
-            width: 30px;
+        @media (min-width:768px) {
+            width: 50px;
         }
     }
 
@@ -69,10 +68,6 @@
         font-family: $fontfamily-subtitle-landing;
         color: $primary-color;
         text-align: center;
-
-        @media (min-width:320px) {
-            font-size: 16px;
-        }
     }
 
     &__comenzar {
@@ -83,15 +78,15 @@
         border: none;
         padding: 15px;
         border-radius: 15px;
-        font-size: 25px;
+        font-size: 16px;
         margin: 5rem;
 
         &:hover {
             background-color: $primary-color;
         }
 
-        @media (min-width:320px) {
-            font-size: 16px;
+        @media (min-width:768px) {
+            font-size: 25px;
         }
     }
 }
