@@ -21,7 +21,7 @@
 
     &__title {
         color: $primary-color;
-        font-family: $fontfamily-title-landing;
+        font-family: $fontfamily-title;
         font-weight: $fontweight-title-landing;
         font-style: $fontstyle-title-landing;
         font-size: 24px;
@@ -33,7 +33,7 @@
     }
 
     &__subtitle {
-        font-family: $fontfamily-subtitle-landing;
+        font-family: $fontfamily-subtitle;
         font-weight: $fontweight-subtitle-landing;
         font-size: 16px;
         font-style: $fontstyle-subtitle-landing;
@@ -74,13 +74,13 @@
     }
 
     &__icontext {
-        font-family: $fontfamily-subtitle-landing;
+        font-family: $fontfamily-subtitle;
         color: $primary-color;
         text-align: center;
     }
 
     &__comenzar {
-        font-family: $fontfamily-subtitle-landing;
+        font-family: $fontfamily-subtitle;
         font-weight: 500;
         background-color: $secondary-color;
         color: white;
