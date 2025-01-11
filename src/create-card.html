@@ -41,7 +41,7 @@
 
                         <label for="palette1" class="palette">
 
-                            <input type="radio" id="palette1" name="theme" value="theme1">
+                            <input type="radio" id="palette1" name="theme" value="theme1" checked>
 
                             <div class="palette__colors">
                                 <span class="palette__square" style="background-color: #264653;"></span>
@@ -140,30 +140,30 @@
         <!-- Tarjeta de previsualización -->
         <section class="preview-section">
             <div class="preview-card">
-                <h2 id="preview-name">Nombre Apellido</h2>
-                <p id="preview-job">Front-end Developer</p>
+                <h2 class="js_previewName" id="preview-name">Nombre Apellido</h2>
+                <p class="js_previewJob" id="preview-job">Front-end Developer</p>
                 <div class="preview-links">
 
                     <a href="#" id="preview-email">
 
-                        <i class="fa-regular fa-envelope" style="color: #029978;"></i>
+                        <i class="fa-regular fa-envelope js_previewIcon"></i>
 
                     </a>
 
                     <a href="#" id="preview-phone">
 
-                        <i class="fa-solid fa-mobile-screen-button" style="color: #029978;"></i>
+                        <i class="fa-solid fa-mobile-screen-button js_previewIcon"></i>
 
                     </a>
                     <a href="https://www.linkedin.com" target="_blank" id="linkedin-icon">
 
-                        <i class="fa-brands fa-linkedin" style="color: #029978;"></i>
+                        <i class="fa-brands fa-linkedin js_previewIcon"></i>
 
                     </a>
 
                     <a href="https://github.com" target="_blank" id="github-icon">
 
-                        <i class="fa-brands fa-github" style="color: #029978;"></i>
+                        <i class="fa-brands fa-github js_previewIcon"></i>
 
                     </a>
                 </div>
@@ -172,6 +172,8 @@
     </main>
 
     <load src="./partials/footer.html" />
+
+    <script src="./js/main.js"></script>
 
 </body>
 
