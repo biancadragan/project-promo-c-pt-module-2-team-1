@@ -86,30 +86,41 @@
                         Rellena</legend>
 
 
-                    <div class="collapsible__content">
-                        <label class="collapsible__label" for="name">Nombre completo</label>
-                        <input class="collapsible__input" type="text" id="name" placeholder="Ej: Sally Jill">
-
-                        <label class="collapsible__label" for="job">Puesto</label>
-                        <input class="collapsible__input" type="text" id="job" placeholder="Ej: Front-end unicorn">
-
-                        <label class="collapsible__label" for="image-selector">Imagen de perfil</label>
-                        <input type="file" id="image-selector" class="collapsible__add_btn js_btnimage">Añadir imagen</input>
-
-                        <label class="collapsible__label" for="email">Email</label>
-                        <input class="collapsible__input" type="email" id="email"
-                            placeholder="Ej: sally.jill@gmail.com">
-
-                        <label class="collapsible__label" for="phone">Teléfono</label>
-                        <input class="collapsible__input" type="tel" id="phone" placeholder="Ej: 555-55-55-55">
-
-                        <label class="collapsible__label" for="linkedin">LinkedIn</label>
-                        <input class="collapsible__input" type="url" id="linkedin"
-                            placeholder="Ej: linkedin.com/in/sally-hill">
-
-                        <label class="collapsible__label" for="github">GitHub</label>
-                        <input class="collapsible__input" type="url" id="github"
-                            placeholder="Ej: github.com/sally-hill">
+                    <div class="collapsible__blocks">
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="name">Nombre completo</label>
+                            <input class="collapsible__input" type="text" id="name" placeholder="Ej: Sally Jill">
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="job">Puesto</label>
+                            <input class="collapsible__input" type="text" id="job" placeholder="Ej: Front-end unicorn">
+                        </div>
+                        <div class="collapsible__content">
+                            <div>
+                                <label class="collapsible__label" for="img-selector">Imagen de perfil</label>
+                            </div>
+                                <input class="hidden js_imgFile" type="file" id="img-selector"></input>
+                                <div class="collapsible__add_btn" style="">Añadir imagen</div>
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="email">Email</label>
+                            <input class="collapsible__input" type="email" id="email"
+                                placeholder="Ej: sally.jill@gmail.com">
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="phone">Teléfono</label>
+                            <input class="collapsible__input" type="tel" id="phone" placeholder="Ej: 555-55-55-55">
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="linkedin">LinkedIn</label>
+                            <input class="collapsible__input" type="url" id="linkedin"
+                                placeholder="Ej: linkedin.com/in/sally-hill">
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="github">GitHub</label>
+                            <input class="collapsible__input" type="url" id="github"
+                                placeholder="Ej: github.com/sally-hill">
+                        </div>
                     </div>
 
                 </fieldset>
