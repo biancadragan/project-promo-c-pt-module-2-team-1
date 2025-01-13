@@ -5,19 +5,18 @@
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
-}
 
-@media (min-width: 768px) {
-  .main-container {
+  @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
+
+    .create-card__form-section {
+      flex: 1;
+    }
   }
 }
 
+
 // Sección del formulario 
-.form-section {
-  flex: 1;
-}
 
 .collapsible {
   width: 100%;
@@ -158,14 +157,33 @@
 
 // Tarjeta de previsualización 
 .preview-section {
+  display: flex;
+  justify-content: center;
   flex: 1;
   text-align: center;
-}
-
-.preview-card {
   border: 2px solid $secondary-color;
   padding: 1rem;
   border-radius: 10px;
+
+
+  @media (min-width: 768px) {
+    height: 380px;
+  }
+}
+
+.preview-card {
+  width: 250px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .preview-card h2,
