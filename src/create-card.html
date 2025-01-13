@@ -96,11 +96,15 @@
                             <input class="collapsible__input" type="text" id="job" placeholder="Ej: Front-end unicorn">
                         </div>
                         <div class="collapsible__content">
-                            <div>
+                            <div class="collapsible__imginput">
                                 <label class="collapsible__label" for="img-selector">Imagen de perfil</label>
+                                <label class="collapsible__add_btn" for="img-selector">Añadir imagen</label>
+                                <input class="hidden js_imgFile" type="file" id="img-selector">
                             </div>
-                                <input class="hidden js_imgFile" type="file" id="img-selector"></input>
-                                <div class="collapsible__add_btn" style="">Añadir imagen</div>
+                            <div class="profile">
+                                <div class="profile__image js__profile-image" style="background-color: #cccccc;"></div>
+                                <div class="profile__preview js__profile-preview" style="background-color: #eaeaea;"></div> 
+                            </div>
                         </div>
                         <div class="collapsible__content">
                             <label class="collapsible__label" for="email">Email</label>

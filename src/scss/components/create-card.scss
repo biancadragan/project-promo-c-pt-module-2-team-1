@@ -61,10 +61,15 @@
 
   &__content {
     padding-inline: 1rem;
-    
     display: flex;
     flex-direction: column;
     font-family: $fontfamily-subtitle;
+  }
+
+  &__imginput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
 
   &__label {
@@ -99,11 +104,6 @@
     }
   }
 
-  &__file {
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
-  }
 
   &__create_btn {
     text-transform: uppercase;
