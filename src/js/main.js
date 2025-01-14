@@ -54,6 +54,7 @@ document.getElementById('palette2').addEventListener('change', () => {
 document.getElementById('palette3').addEventListener('change', () => {
     applyTheme(themes.theme3); // Aplica el tema 3
 });
+
 import './get-avatar.js';
 
 // PREVIEW Section
