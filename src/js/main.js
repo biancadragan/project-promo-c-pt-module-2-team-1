@@ -23,8 +23,8 @@ const themes = {
     },
 };
 
-const previewName = document.querySelector('.js_previewName');
-const previewJob = document.querySelector('.js_previewJob');
+const previewName = document.querySelector('.js_preview_name');
+const previewJob = document.querySelector('.js_preview_job');
 const previewIcons = document.querySelectorAll('.js_previewIcon');
 const paletteInputs = document.querySelectorAll('input[name="theme"]');
 
