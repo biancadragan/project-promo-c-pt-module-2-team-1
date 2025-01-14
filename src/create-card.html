@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="./scss/main.scss" />
     <link rel="icon" href="../public/favicon.png" />
+
+    <script src="https://kit.fontawesome.com/1395535f34.js" crossorigin="anonymous"></script>
 </head>
 
 <load src="./partials/header.html" />
@@ -91,10 +93,12 @@
 
                     <div class="collapsible__content">
                         <label class="collapsible__label" for="name">Nombre completo</label>
-                        <input class="collapsible__input js_input js_name" type="text" id="name" placeholder="Ej: Sally Jill">
+                        <input class="collapsible__input js_input js_name" type="text" id="name"
+                            placeholder="Ej: Sally Jill">
 
                         <label class="collapsible__label" for="job">Puesto</label>
-                        <input class="collapsible__input js_input js_job" type="text" id="job" placeholder="Ej: Front-end unicorn">
+                        <input class="collapsible__input js_input js_job" type="text" id="job"
+                            placeholder="Ej: Front-end unicorn">
 
                         <label class="collapsible__label" for="image">Imagen de perfil</label>
                         <button type="button" class="collapsible__add_btn">Añadir imagen</button>
@@ -104,7 +108,8 @@
                             placeholder="Ej: sally.jill@gmail.com">
 
                         <label class="collapsible__label" for="phone">Teléfono</label>
-                        <input class="collapsible__input js_input js_tel" type="tel" id="phone" placeholder="Ej: 555-55-55-55">
+                        <input class="collapsible__input js_input js_tel" type="tel" id="phone"
+                            placeholder="Ej: 555-55-55-55">
 
                         <label class="collapsible__label" for="linkedin">LinkedIn</label>
                         <input class="collapsible__input js_input js_linkedin" type="url" id="linkedin"
@@ -139,9 +144,17 @@
 
         <!-- Tarjeta de previsualización -->
         <section class="preview-section">
+            <div>
+                <button class="preview-btn" type="submit">Borrar tarjeta<i class="btn fa-solid fa-trash"></i></button>
+            </div>
             <div class="preview-card">
                 <h2 class="js_preview_name" id="preview-name">Nombre Apellido</h2>
                 <p class="js_preview_job" id="preview-job">Posición</p>
+                <div class="preview-image-container">
+                    <img class="preview-image" src="./images/avatar.png" alt="Avatar">
+                </div>
+
+
                 <div class="preview-links">
 
                     <a class="js_preview_email" href='' classid="preview-email">
