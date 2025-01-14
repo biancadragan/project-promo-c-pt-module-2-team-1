@@ -104,6 +104,21 @@
     }
   }
 
+  &__input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__preview-pic {
+      width: 50px;
+      height: 50px;
+      margin-left: 15px;
+      border: solid 1px $primary-color;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
 
   &__create_btn {
     text-transform: uppercase;
@@ -136,7 +151,6 @@
 
 }
 
-
 // Paletas de colores 
 
 .palette {
@@ -168,12 +182,25 @@
   border: 2px solid $secondary-color;
   padding: 1rem;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .preview-card h2,
 .preview-card p {
   margin-bottom: 1rem;
   font-family: $fontfamily-subtitle;
+}
+
+.preview-photo {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .preview-links a {

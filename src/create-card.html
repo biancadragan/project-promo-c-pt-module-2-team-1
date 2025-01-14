@@ -98,12 +98,11 @@
                         <div class="collapsible__content">
                             <div class="collapsible__imginput">
                                 <label class="collapsible__label" for="img-selector">Imagen de perfil</label>
-                                <label class="collapsible__add_btn" for="img-selector">Añadir imagen</label>
-                                <input class="hidden js_imgFile" type="file" id="img-selector">
-                            </div>
-                            <div class="profile">
-                                <div class="profile__image js__profile-image" style="background-color: #cccccc;"></div>
-                                <div class="profile__preview js__profile-preview" style="background-color: #eaeaea;"></div> 
+                                <div class="collapsible__input-group">
+                                    <label class="collapsible__add_btn" for="img-selector">Añadir imagen</label>
+                                    <input class="hidden js__profile-upload-btn" type="file" id="img-selector">
+                                    <span class="collapsible__preview-pic js__profile-preview"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="collapsible__content">
@@ -153,6 +152,7 @@
             <div class="preview-card">
                 <h2 id="preview-name">Nombre Apellido</h2>
                 <p id="preview-job">Front-end Developer</p>
+                <div class="preview-photo js__profile-image" style="background-image: url('../images/Profile-pic.png');"></div>
                 <div class="preview-links">
 
                     <a href="#" id="preview-email">
@@ -183,11 +183,6 @@
     </main>
 
     <load src="./partials/footer.html" />
-
+    <script src="./js/get-avatar.js"></script>
 </body>
 
-</html>
-
-</body>
-
-</html>
