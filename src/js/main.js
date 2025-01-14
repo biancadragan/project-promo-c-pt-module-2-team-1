@@ -5,16 +5,10 @@ console.log('>> Ready :)');
 //selectores de contenido
 const createBtn = document.querySelector('.js_createBtn'); 
 
-//contenido dinámico
+//evento y funciones
+function handleClickCreate = (ev) => {
+    ev.preventDefault(); 
+    console.log (data)
+}; 
 
-
-
-
-//funciones para botón 
-const shareTwitter = (ev) => {
-
-} 
-
-createBtn.addEventListener('click'(ev)) => {
-
-}
+createBtn.addEventListener('click', handleClickCreate); 
