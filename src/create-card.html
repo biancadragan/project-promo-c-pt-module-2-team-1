@@ -118,7 +118,48 @@
                         <label class="collapsible__label" for="github">GitHub</label>
                         <input class="collapsible__input js_input js_github" type="url" id="github"
                             placeholder="Ej: github.com/sally-hill">
-                    </div>
+                        <div class="collapsible__blocks">
+                            <div class="collapsible__content">
+                                <label class="collapsible__label" for="name">Nombre completo</label>
+                                <input class="collapsible__input js_input js_name" type="text" id="name"
+                                    placeholder="Ej: Sally Jill">
+                            </div>
+                            <div class="collapsible__content">
+                                <label class="collapsible__label" for="job">Puesto</label>
+                                <input class="collapsible__input js_input js_job" type="text" id="job"
+                                    placeholder="Ej: Front-end unicorn">
+                            </div>
+                            <div class="collapsible__content">
+                                <div class="collapsible__imginput">
+                                    <label class="collapsible__label" for="img-selector">Imagen de perfil</label>
+                                    <div class="collapsible__input-group">
+                                        <label class="collapsible__add_btn" for="img-selector">Añadir imagen</label>
+                                        <input class="hidden js__profile-upload-btn" type="file" id="img-selector">
+                                        <span class="collapsible__preview-pic js__profile-preview"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapsible__content">
+                                <label class="collapsible__label" for="email">Email</label>
+                                <input class="collapsible__input js_input js_email" type="email" id="email"
+                                    placeholder="Ej: sally.jill@gmail.com">
+                            </div>
+                            <div class="collapsible__content">
+                                <label class="collapsible__label" for="phone">Teléfono</label>
+                                <input class="collapsible__input js_input js_tel" type="tel" id="phone"
+                                    placeholder="Ej: 555-55-55-55">
+                            </div>
+                            <div class="collapsible__content">
+                                <label class="collapsible__label" for="linkedin">LinkedIn</label>
+                                <input class="collapsible__input js_input js_linkedin" type="url" id="linkedin"
+                                    placeholder="Ej: linkedin.com/in/sally-hill">
+                            </div>
+                            <div class="collapsible__content">
+                                <label class="collapsible__label" for="github">GitHub</label>
+                                <input class="collapsible__input js_input js_github" type="url" id="github"
+                                    placeholder="Ej: github.com/sally-hill">
+                            </div>
+                        </div>
 
                 </fieldset>
 
@@ -151,8 +192,12 @@
                 <h2 class="js_preview_name" id="preview-name">Nombre Apellido</h2>
                 <p class="js_preview_job" id="preview-job">Posición</p>
                 <div class="preview-image-container">
-                    <img class="preview-image" src="./images/avatar.png" alt="Avatar">
+
+                    <div class="preview-image js__profile-image"
+                        style="background-image: url('../images/Profile-pic.png');">
+                    </div>
                 </div>
+
 
 
                 <div class="preview-links">
@@ -188,5 +233,5 @@
     <script src="./js/main.js"></script>
 
 </body>
-
-</html>
+<script src="./js/get-avatar.js"></script>
+</body>

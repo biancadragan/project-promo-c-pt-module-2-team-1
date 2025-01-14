@@ -2,6 +2,8 @@
 
 console.log('>> Ready :)');
 
+import './get-avatar.js';
+
 // PREVIEW Section
 const data = {
     palette: 1,
@@ -57,3 +59,4 @@ form.addEventListener('input', handleInput);
 
 // Inicializamos la previsualización
 updatePreview();
+
