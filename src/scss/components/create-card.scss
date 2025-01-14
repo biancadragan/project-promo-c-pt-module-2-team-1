@@ -20,7 +20,7 @@
 }
 
 .collapsible {
-
+  width: 100%;
   border: 1px solid $primary-color;
   border-radius: 15px;
   margin-bottom: 1rem;
@@ -41,14 +41,18 @@
   &__title {
     font-family: $fontfamily-title;
     font-weight: $fontweight-title-landing;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: $primary-color;
     background-color: white;
     padding: 1rem;
     text-transform: uppercase;
     cursor: pointer;
     display: flex;
+    position: relative;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding-right: 3rem;
     border: 1px solid $primary-color;
     border-radius: 15px;
   }
@@ -57,6 +61,14 @@
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: $secondary-color;
+    transition: transform 0.3s ease;
   }
 
   &__content {
@@ -141,14 +153,12 @@
     &:hover {
       background-color: #fea014;
     }
-
   }
 
   &__icon_create_btn {
     margin-right: 0.5rem;
     font-size: 1.5rem;
   }
-
 }
 
 // Paletas de colores 
