@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="./scss/main.scss" />
     <link rel="icon" href="../public/favicon.png" />
+
+    <script src="https://kit.fontawesome.com/1395535f34.js" crossorigin="anonymous"></script>
 </head>
 
 <load src="./partials/header.html" />
@@ -24,7 +26,7 @@
         <!-- Formulario -->
         <section class="create-card__form-section">
 
-            <form class="form">
+            <form class="form js_form">
 
                 <!-- Colapsable 1: Diseña -->
                 <fieldset class="collapsible collapsible-design">
@@ -32,6 +34,7 @@
                     <legend class="collapsible__title">
                         <img class=collapsible__image src="images/diseña.jpeg" alt="Logo de Diseña">
                         Diseña
+                        <i class="fa-solid fa-caret-down collapsible__icon"></i>
                     </legend>
 
                     <div class="collapsible__content">
@@ -83,33 +86,50 @@
 
                     <legend class="collapsible__title"><img class=collapsible__image src="images/rellena.jpeg"
                             alt="Logo de Rellena">
-                        Rellena</legend>
-
-
-                    <div class="collapsible__content">
-                        <label class="collapsible__label" for="name">Nombre completo</label>
-                        <input class="collapsible__input" type="text" id="name" placeholder="Ej: Sally Jill">
-
-                        <label class="collapsible__label" for="job">Puesto</label>
-                        <input class="collapsible__input" type="text" id="job" placeholder="Ej: Front-end unicorn">
-
-                        <label class="collapsible__label" for="image">Imagen de perfil</label>
-                        <button type="button" class="collapsible__add_btn">Añadir imagen</button>
-
-                        <label class="collapsible__label" for="email">Email</label>
-                        <input class="collapsible__input" type="email" id="email"
-                            placeholder="Ej: sally.jill@gmail.com">
-
-                        <label class="collapsible__label" for="phone">Teléfono</label>
-                        <input class="collapsible__input" type="tel" id="phone" placeholder="Ej: 555-55-55-55">
-
-                        <label class="collapsible__label" for="linkedin">LinkedIn</label>
-                        <input class="collapsible__input" type="url" id="linkedin"
-                            placeholder="Ej: linkedin.com/in/sally-hill">
-
-                        <label class="collapsible__label" for="github">GitHub</label>
-                        <input class="collapsible__input" type="url" id="github"
-                            placeholder="Ej: github.com/sally-hill">
+                        Rellena
+                        <i class="fa-solid fa-caret-down collapsible__icon"></i>
+                    </legend>
+                    <div class="collapsible__blocks">
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="name">Nombre completo</label>
+                            <input class="collapsible__input js_input js_name" type="text" id="name"
+                                placeholder="Ej: Sally Jill">
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="job">Puesto</label>
+                            <input class="collapsible__input js_input js_job" type="text" id="job"
+                                placeholder="Ej: Front-end unicorn">
+                        </div>
+                        <div class="collapsible__content">
+                            <div class="collapsible__imginput">
+                                <label class="collapsible__label" for="img-selector">Imagen de perfil</label>
+                                <div class="collapsible__input-group">
+                                    <label class="collapsible__add_btn" for="img-selector">Añadir imagen</label>
+                                    <input class="hidden js__profile-upload-btn" type="file" id="img-selector">
+                                    <span class="collapsible__preview-pic js__profile-preview"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="email">Email</label>
+                            <input class="collapsible__input js_input js_email" type="email" id="email"
+                                placeholder="Ej: sally.jill@gmail.com">
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="phone">Teléfono</label>
+                            <input class="collapsible__input js_input js_tel" type="tel" id="phone"
+                                placeholder="Ej: 555-55-55-55">
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="linkedin">LinkedIn</label>
+                            <input class="collapsible__input js_input js_linkedin" type="url" id="linkedin"
+                                placeholder="Ej: linkedin.com/in/sally-hill">
+                        </div>
+                        <div class="collapsible__content">
+                            <label class="collapsible__label" for="github">GitHub</label>
+                            <input class="collapsible__input js_input js_github" type="url" id="github"
+                                placeholder="Ej: github.com/sally-hill">
+                        </div>
                     </div>
 
                 </fieldset>
@@ -119,6 +139,7 @@
                     <legend class="collapsible__title">
                         <img class=collapsible__image src="images/comparte.jpeg" alt="Logo de Comparte">
                         Comparte
+                        <i class="fa-solid fa-caret-down collapsible__icon"></i>
                     </legend>
 
                     <div class="collapsible__content">
@@ -135,44 +156,54 @@
 
         <!-- Tarjeta de previsualización -->
         <section class="preview-section">
+            <div>
+                <button class="preview-btn" type="submit">Borrar tarjeta<i class="btn fa-solid fa-trash"></i></button>
+            </div>
             <div class="preview-card">
-                <h2 id="preview-name">Nombre Apellido</h2>
-                <p id="preview-job">Front-end Developer</p>
+                <h2 class="js_preview_name" id="preview-name">Nombre Apellido</h2>
+                <p class="js_preview_job" id="preview-job">Profesión</p>
+                <div class="preview-image-container">
+
+                    <div class="preview-image js__profile-image"
+                        style="background-image: url('../images/Profile-pic.png');">
+                    </div>
+                </div>
+
                 <div class="preview-links">
 
-                    <a href="#" id="preview-email">
+                    <a class="js_preview_email" href='' classid="preview-email">
 
-                        <i class="fa-regular fa-envelope" style="color: #029978;"></i>
-
-                    </a>
-
-                    <a href="#" id="preview-phone">
-
-                        <i class="fa-solid fa-mobile-screen-button" style="color: #029978;"></i>
-
-                    </a>
-                    <a href="https://www.linkedin.com" target="_blank" id="linkedin-icon">
-
-                        <i class="fa-brands fa-linkedin" style="color: #029978;"></i>
+                        <i class="fa-regular fa-envelope js_previewIcon"></i>
 
                     </a>
 
-                    <a href="https://github.com" target="_blank" id="github-icon">
+                    <a class="js_preview_phone" href='' id="preview-phone">
 
-                        <i class="fa-brands fa-github" style="color: #029978;"></i>
+                        <i class="fa-solid fa-mobile-screen-button js_previewIcon"></i>
+
+                    </a>
+                    <a class="js_preview_linkedin" href='' target="_blank" id="linkedin-icon">
+
+                        <i class="fa-brands fa-linkedin js_previewIcon"></i>
+
+                    </a>
+
+                    <a class="js_preview_github" href='' target="_blank" id="github-icon">
+
+                        <i class="fa-brands fa-github js_previewIcon"></i>
 
                     </a>
                 </div>
             </div>
+
         </section>
+
     </main>
     <div id="shareContent" class="js_shareBtn"></div>
     <load src="./partials/footer.html" />
 
+    <script src="./js/main.js"></script>
+
+    <script src="./js/get-avatar.js"></script>
+
 </body>
-
-</html>
-
-</body>
-
-</html>
