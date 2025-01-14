@@ -3,6 +3,14 @@
     &__image {
         height: 5rem;
         margin-top: 1rem;
+
+        @media (min-width: 768px) {
+            height: 7rem;
+        }
+
+        @media (min-width: 1280px) {
+            height: 10rem;
+        }
     }
 
 }
