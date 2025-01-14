@@ -21,8 +21,8 @@ const data = {
 //evento y funciones
 function handleClickCreate = (ev) => {
     ev.preventDefault(); 
-    console.log (data);
-     
+    console.log (data)
+
 
 }; 
 
