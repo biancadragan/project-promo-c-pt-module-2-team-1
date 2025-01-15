@@ -36,7 +36,7 @@ La aplicación está diseñada para ser intuitiva, rápida y adaptable a diferen
   <li>JavaScript.</li>
   <li>Starter Kit de Adalab.</li>
   <li>LocalStorage.</li>
-  <li>//Fetch API.//</li>
+  <li>Fetch enlazado a la API de Adalab.</li>
 </ul>
 
   <h2>📖 Cómo Usar la Aplicación</h2>
