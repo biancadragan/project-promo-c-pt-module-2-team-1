@@ -113,3 +113,23 @@ form.addEventListener('input', handleInput);
 // Inicializamos la previsualización
 updatePreview();
 
+//Seccion compartir
+
+//Selectores de contenido
+
+createBtn = document.querySelector('.js_createBtn'); 
+shareBtn = document.querySelector('.js_shareBtn'); 
+
+//Acciones de botón "Crear tarjeta"
+
+function handleClickCreate (ev) {
+    ev.preventDefault(); 
+    console.log(data)
+    fetch('https://dev.adalab.es/') {
+        method: 'POST', 
+        headers: 
+    }
+}
+
+//evento para que al hacer click ejecute la acción 
+createBtn.addEventListener('click', handleClickCreate); 
