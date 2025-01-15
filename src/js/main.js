@@ -117,18 +117,28 @@ updatePreview();
 
 //Selectores de contenido
 
-createBtn = document.querySelector('.js_createBtn'); 
-shareBtn = document.querySelector('.js_shareBtn'); 
+const createBtn = document.querySelector('.js_createBtn'); 
+const shareBtn = document.querySelector('.js_shareBtn'); 
 
 //Acciones de botón "Crear tarjeta"
 
 function handleClickCreate (ev) {
     ev.preventDefault(); 
-    console.log(data)
-    fetch('https://dev.adalab.es/') {
+
+    const dataToSend {}
+
+    console.log(data);
+
+    fetch('https://dev.adalab.es/api/info/data', {
         method: 'POST', 
-        headers: 
-    }
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)    
+    })//enviar datos
+    .then(response => response.json())
+    .then(responseData => {
+        console.log(responseData);
+
+    })
 }
 
 //evento para que al hacer click ejecute la acción 
