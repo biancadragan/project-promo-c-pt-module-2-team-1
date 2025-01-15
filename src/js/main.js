@@ -38,7 +38,7 @@ const applyTheme = (theme) => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const selectedTheme = document.querySelector('input[name="field1"]:checked').value;
+    const selectedTheme = document.querySelector('input[name="theme"]:checked').value;
     applyTheme(themes[selectedTheme]); // Aplica el tema basado en el radio seleccionado
 });
 
