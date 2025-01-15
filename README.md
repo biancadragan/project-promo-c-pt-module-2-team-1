@@ -8,25 +8,25 @@
 
 La aplicación permite a las usuarias diseñar y generar tarjetas de contacto personalizadas con información clave, como:
 <ul>
-  <li>Nombre y Apellidos: Identifica al usuario de manera clara y profesional.</li>
-  <li>Puesto de Trabajo: Describe el cargo o rol profesional.</li>
-  <li>Foto Personal: Añade un toque visual personalizado a la tarjeta.</li>
- <li>Información de Contacto:</li>
+  <li><b>Nombre y Apellidos:</b> Identifica al usuario de manera clara y profesional.</li>
+  <li><b>Puesto de Trabajo:</b> Describe el cargo o rol profesional.</li>
+  <li><b>Foto Personal:</b> Añade un toque visual personalizado a la tarjeta.</li>
+ <li><b>Información de Contacto:</b></li>
        <ul><li>Teléfono.</li>
         <li>Email.</li>
         <li>Perfil de LinkedIn.</li>
         <li>Perfil de GitHub.</li></ul>
-  <li>Opciones de Compartir: La tarjeta se puede compartir fácilmente en varias plataformas de redes sociales.</li>
+  <li><b>Opciones de Compartir:</b> La tarjeta se puede compartir fácilmente en varias plataformas de redes sociales.</li>
 </ul>
 La aplicación está diseñada para ser intuitiva, rápida y adaptable a diferentes necesidades.
 
 <h2>🚀 Características Principales</h2>
 <ol>
-  <li>Interfaz Fácil de Usar: Una experiencia amigable para personalizar tu tarjeta en minutos.</li>
-	<li>Previsualización en Tiempo Real: Observa cómo queda tu tarjeta mientras la editas.</li>
-	<li>Opciones de Compartir: Exporta tu tarjeta y compártela directamente en redes sociales como Twitter, Facebook o WhatsApp.</li>
-	<li>Diseño Responsivo: Compatible con dispositivos móviles y de escritorio.</li>
-	<li>Personalización Completa: Ajusta los colores y estilos según tu preferencia.</li>
+ 	<li><b>Interfaz Fácil de Usar:</b> Una experiencia amigable para personalizar tu tarjeta en minutos.</li>
+	<li><b>Previsualización en Tiempo Real:</b> Observa cómo queda tu tarjeta mientras la editas.</li>
+	<li><b>Opciones de Compartir:</b> Exporta tu tarjeta y compártela directamente en redes sociales como Twitter, Facebook o WhatsApp.</li>
+	<li><b>Diseño Responsive:</b> Compatible con dispositivos móviles y de escritorio.</li>
+	<li><b>Personalización Completa:</b> Ajusta los colores y estilos según tu preferencia.</li>
 </ol>
  
  <h2>🛠️ Tecnologías Utilizadas</h2>
