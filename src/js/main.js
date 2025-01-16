@@ -89,6 +89,7 @@ const handleInput = (ev) => {
 
 // Función para actualizar la previsualización
 function updatePreview() {
+
     // Actualizamos nombre y puesto
     namePreview.innerHTML = (data.name === '') ? 'Nombre Apellido' : data.name;
     jobPreview.innerHTML = (data.job === '') ? 'Posición' : data.job;
@@ -97,7 +98,7 @@ function updatePreview() {
     phonePreview.setAttribute('href', data.phone ? `tel:${data.phone}` : '');
     emailPreview.setAttribute('href', data.email ? `mailto:${data.email}` : '');
 
-    // Ocultamos íconos si los campos están vacíos
+    // Ocultamos iconos si los campos están vacíos
     phonePreview.style.display = data.phone ? 'inline-block' : 'none';
     emailPreview.style.display = data.email ? 'inline-block' : 'none';
     linkedInPreview.setAttribute('href', data.linkedin ? data.linkedin : '');
@@ -132,7 +133,6 @@ const toggleCollapsible = (icon, fieldsetClass) => {
 
     // Cambiar el icono de caret
 
-    debugger;
     if (contents[0].classList.contains('is-open')) {
         icon.classList.remove('fa-caret-down');
         icon.classList.add('fa-caret-up');
