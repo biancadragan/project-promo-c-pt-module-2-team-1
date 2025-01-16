@@ -6,8 +6,16 @@
     gap: 2em;
     align-items: center;
 
+    &__title {
+        font-family: $fontfamily-title;
+        color: $secondary-color;
+    }
+
     &__link {
-    color: $secondary-color;
+    color: black;
+    border: solid 0.5px $secondary-color;
+    padding: 1rem;
+    border-radius: 15px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
