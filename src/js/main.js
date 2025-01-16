@@ -34,6 +34,7 @@ const applyTheme = (theme) => {
   });
 };
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const selectedTheme = document.querySelector(
     'input[name="field1"]:checked'
