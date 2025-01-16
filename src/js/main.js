@@ -22,9 +22,15 @@ const themes = {
   },
 };
 
+<<<<<<< HEAD
 const previewName = document.querySelector(".js_preview_name");
 const previewJob = document.querySelector(".js_preview_job");
 const previewIcons = document.querySelectorAll(".js_previewIcon");
+=======
+const previewName = document.querySelector('.js_preview_name');
+const previewJob = document.querySelector('.js_preview_job');
+const previewIcons = document.querySelectorAll('.js_previewIcon');
+>>>>>>> 6409d06376fd7a02f661586d856ce782917b19d7
 
 const applyTheme = (theme) => {
   previewName.style.color = theme.nameColor;
@@ -90,9 +96,16 @@ const handleInput = (ev) => {
 
 // Función para actualizar la previsualización
 function updatePreview() {
+<<<<<<< HEAD
   // Actualizamos nombre y puesto
   namePreview.innerHTML = data.field2 === "" ? "Nombre Apellido" : data.field2;
   jobPreview.innerHTML = data.field3 === "" ? "Posición" : data.field3;
+=======
+
+    // Actualizamos nombre y puesto
+    namePreview.innerHTML = data.field2 === "" ? "Nombre Apellido" : data.field2;
+    jobPreview.innerHTML = data.field3 === "" ? "Posición" : data.field3;
+>>>>>>> 6409d06376fd7a02f661586d856ce782917b19d7
 
   // Actualizamos enlaces de contacto
   phonePreview.setAttribute("href", data.field5 ? `tel:${data.field5}` : "");
@@ -210,5 +223,42 @@ let clearData = (ev) => {
   applyTheme(themes.theme1);
 };
 
-btnDelete.addEventListener("click", clearData);
+btnDelete.addEventListener('click', clearData);
+
+
+
+// Desplegables
+
+const designIcon = document.querySelector('.js_designIcon');
+const fillIcon = document.querySelector('.js_fillIcon');
+const shareIcon = document.querySelector('.js_shareIcon');
+
+const toggleCollapsible = (icon, fieldsetClass) => {
+
+    const fieldset = document.querySelector(fieldsetClass); // Selecciona la sección específica
+    const contents = fieldset.querySelectorAll('.js_collapsibleContent'); // Encuentra el contenido de la sección
+
+    // Alternar la clase para mostrar/ocultar el contenido
+    contents.forEach(content => {
+        if (content) {
+            content.classList.toggle('is-open');
+        }
+    });
+
+    // Cambiar el icono de caret
+
+    if (contents[0].classList.contains('is-open')) {
+        icon.classList.remove('fa-caret-down');
+        icon.classList.add('fa-caret-up');
+    } else {
+        icon.classList.remove('fa-caret-up');
+        icon.classList.add('fa-caret-down');
+    }
+}
+
+// Añadir evento de clic para cada icono
+designIcon.addEventListener('click', () => toggleCollapsible(designIcon, '.js_designFieldset'));
+fillIcon.addEventListener('click', () => toggleCollapsible(fillIcon, '.js_fillFieldset'));
+shareIcon.addEventListener('click', () => toggleCollapsible(shareIcon, '.js_shareFieldset'));
+
 

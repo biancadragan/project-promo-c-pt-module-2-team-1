@@ -15,6 +15,19 @@
   }
 }
 
+// Cuando tiene la clase is-open, se muestra 
+.collapsible__content.is-open {
+  display: block;
+}
+
+// Iconos para estados abiertos y cerrados 
+.fa-caret-down {
+  cursor: pointer;
+}
+
+.fa-caret-up {
+  cursor: pointer;
+}
 
 // Sección del formulario 
 
@@ -59,7 +72,6 @@
   &__blocks {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
   }
 
   &__icon {
@@ -71,8 +83,12 @@
   }
 
   &__content {
-    padding-inline: 1rem;
+    display: none;
+  }
+
+  &__content.is-open {
     display: flex;
+    padding-inline: 1rem;
     flex-direction: column;
     font-family: $fontfamily-subtitle;
   }
