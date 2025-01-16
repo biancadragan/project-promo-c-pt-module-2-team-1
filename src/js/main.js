@@ -96,16 +96,10 @@ const handleInput = (ev) => {
 
 // Función para actualizar la previsualización
 function updatePreview() {
-<<<<<<< HEAD
+
   // Actualizamos nombre y puesto
   namePreview.innerHTML = data.field2 === "" ? "Nombre Apellido" : data.field2;
   jobPreview.innerHTML = data.field3 === "" ? "Posición" : data.field3;
-=======
-
-    // Actualizamos nombre y puesto
-    namePreview.innerHTML = data.field2 === "" ? "Nombre Apellido" : data.field2;
-    jobPreview.innerHTML = data.field3 === "" ? "Posición" : data.field3;
->>>>>>> 6409d06376fd7a02f661586d856ce782917b19d7
 
   // Actualizamos enlaces de contacto
   phonePreview.setAttribute("href", data.field5 ? `tel:${data.field5}` : "");
