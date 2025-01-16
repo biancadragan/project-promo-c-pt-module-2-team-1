@@ -138,28 +138,29 @@ function handleClickCreate(ev) {
     .then((responseData) => {
       console.log(responseData);
 
-      //resultados y botón de envío de la tarjeta a una Bluesky
+      //resultados y botón de envío de la tarjeta a Bluesky
       if (responseData.success === true) {
         cardResultSection.innerHTML = `
         <h2 class="share_result__title">¡Aquí tienes el enlace a tu ProCard!</h2>
         <p class="share_result__subtitle">Que la disfrutes &#x1F604</p>
         <a class="share_result__link" href="https://dev.adalab.es/api/info/${responseData.infoID}">https://dev.adalab.es/api/info/${responseData.infoID}</a>
         <a class="share_result__shareButton" href="https://bsky.app/intent/compose?text=TU_TEXTO_AQUÍ&url=TU_URL_AQUÍ${responseData.infoID}">Compartir en Bluesky</a>
-        `;
+        `; //pinta un texto de confirmación y un enlace a Bluesky
 
       } else {
         const errorEnCastellano = responseData.error
-          .replace("Mandatory fields", "Campos obligatorios:");
-          .replace("field2", "nombre");
-          .replace("field3", "puesto");
-          .replace("field4", "email");
-          .replace("field5", "teléfono");
-          .replace("field6", "LinkedIn");
-          .replace("field7", "Github");
+          .replace("Mandatory fields", "Campos obligatorios")
+          .replace("field2", "nombre")
+          .replace("field3", "puesto")
+          .replace("field4", "email")
+          .replace("field5", "teléfono")
+          .replace("field6", "LinkedIn")
+          .replace("field7", "Github")
+          .replace("photo", "foto");
         cardResultSection.innerHTML = `
         <p>Desafortunadamente no se ha podido guardar la información</p>
-        <p>${responseData.error}</p>
-        `;
+        <p>${errorEnCastellano}</p>
+        `; //genera un mensaje de error si no se rellenan los campos necesarios para generar la tarjeta
       }
     })
 
@@ -170,6 +171,10 @@ function handleClickCreate(ev) {
 
 //evento para que al hacer click ejecute la acción
 createBtn.addEventListener("click", handleClickCreate);
+
+//Almacenamiento en local (LocalStorage)
+
+
 //BORRAR LOS DATOS
 
 const btnDelete = document.querySelector(".js_preview-btn");
@@ -205,3 +210,4 @@ let clearData = (ev) => {
 };
 
 btnDelete.addEventListener("click", clearData);
+
