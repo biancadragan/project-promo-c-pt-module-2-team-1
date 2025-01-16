@@ -15,6 +15,28 @@
   }
 }
 
+// Estilos para collapsables
+
+// Por defecto, el contenido está oculto 
+.collapsible__content {
+  display: none;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+// Cuando tiene la clase is-open, se muestra 
+.collapsible__content.is-open {
+  display: block;
+}
+
+// Iconos para estados abiertos y cerrados 
+.fa-caret-down {
+  cursor: pointer;
+}
+
+.fa-caret-up {
+  cursor: pointer;
+}
 
 // Sección del formulario 
 

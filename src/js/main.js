@@ -26,7 +26,6 @@ const themes = {
 const previewName = document.querySelector('.js_preview_name');
 const previewJob = document.querySelector('.js_preview_job');
 const previewIcons = document.querySelectorAll('.js_previewIcon');
-const paletteInputs = document.querySelectorAll('input[name="theme"]');
 
 const applyTheme = (theme) => {
 
@@ -113,3 +112,31 @@ form.addEventListener('input', handleInput);
 // Inicializamos la previsualización
 updatePreview();
 
+// Desplegables
+
+const designIcon = document.querySelector('.js_designIcon');
+const fillIcon = document.querySelector('.js_fillIcon');
+const shareIcon = document.querySelector('.js_shareIcon');
+
+const toggleCollapsible(icon) {
+
+    // Encuentra el contenedor del colapsable
+    const collapsibleContent = icon.closest('.collapsible').querySelector('.collapsible__content');
+
+    // Alternar la clase para mostrar/ocultar el contenido
+    collapsibleContent.classList.toggle('is-open');
+
+    // Cambiar el icono de caret
+    if (collapsibleContent.classList.contains('is-open')) {
+        icon.classList.remove('fa-caret-down');
+        icon.classList.add('fa-caret-up');
+    } else {
+        icon.classList.remove('fa-caret-up');
+        icon.classList.add('fa-caret-down');
+    }
+}
+
+// Añadir evento de clic para cada icono
+designIcon.addEventListener('click', () => toggleCollapsible(designIcon));
+fillIcon.addEventListener('click', () => toggleCollapsible(fillIcon));
+shareIcon.addEventListener('click', () => toggleCollapsible(shareIcon));
