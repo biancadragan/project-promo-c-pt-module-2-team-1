@@ -59,7 +59,7 @@ document.getElementById('palette3').addEventListener('change', () => {
 import './get-avatar.js';
 
 // PREVIEW Section
-const data = {
+let data = {
     palette: 1,
     name: '',
     job: '',
@@ -116,30 +116,45 @@ updatePreview();
 
 //BORRAR LOS DATOS
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    const resetButton = document.querySelector(".js_preview-btn");
-    const profileImage = document.querySelector(".js__profile-image");
-    const profilePreview = document.querySelector('.js__profile-preview');
-
-    resetButton.addEventListener("click", (ev) => {
-        ev.preventDefault(); // Evita que el formulario haga un reset automático
-
-        // Restablecer los campos del formulario
-        form.reset();
-
-        // Restablecer la previsualización de la tarjeta
-        namePreview.textContent = "Nombre Apellido";
-        jobPreview.textContent = "Profesión";
-        profileImage.style.backgroundImage = "url('../images/Profile-pic.png')";
-        profilePreview.style.backgroundImage = "url('../images/Profile-pic.png')";
-
-        // Restablecer el tema por defecto
-        applyTheme(themes.theme1);
+const btnDelete = document.querySelector(".js_preview-btn");
+const profileImageReset = document.querySelector(".js__profile-image");
+const profilePreviewReset = document.querySelector('.js__profile-preview');
 
 
-    });
-});
+let clearData = (ev) => {
+    console.log('funciono');
+
+    data = {
+        palette: "theme1",
+        name: '',
+        job: '',
+        photo: '',
+        phone: '',
+        email: '',
+        linkedin: '',
+        github: '',
+    };
+
+    profileImageReset.style.backgroundImage = "url('../images/Profile-pic.png')";
+    profilePreviewReset.style.backgroundImage = "url('../images/Profile-pic.png')";
+
+    // Limpiar el formulario
+    form.reset();
+
+    // Limpiar la previsualización
+    updatePreview(data);
+
+    // Restablecer el tema por defecto
+    applyTheme(themes.theme1);
+
+
+
+
+
+};
+
+btnDelete.addEventListener('click', clearData);
 
 
 
