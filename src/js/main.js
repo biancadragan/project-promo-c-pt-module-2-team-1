@@ -59,7 +59,7 @@ import "./get-avatar.js";
 
 // PREVIEW Section
 const data = {
-  field1: 1,
+  field1: "theme1",
   field2: "",
   field3: "",
   photo: "",
