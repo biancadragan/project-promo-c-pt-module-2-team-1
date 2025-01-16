@@ -43,7 +43,7 @@
 
                         <label for="palette1" class="palette">
 
-                            <input type="radio" id="palette1" name="theme" value="theme1" checked>
+                            <input type="radio" id="palette1" name="field1" value="theme1" checked>
 
                             <div class="palette__colors">
                                 <span class="palette__square" style="background-color: #264653;"></span>
@@ -55,7 +55,7 @@
 
                         <label for="palette2" class="palette">
 
-                            <input type="radio" id="palette2" name="theme" value="theme2">
+                            <input type="radio" id="palette2" name="field1" value="theme2">
 
                             <div class="palette__colors">
                                 <span class="palette__square" style="background-color: #f4a261;"></span>
@@ -67,7 +67,7 @@
 
                         <label for="palette3" class="palette">
 
-                            <input type="radio" id="palette3" name="theme" value="theme3">
+                            <input type="radio" id="palette3" name="field1" value="theme3">
 
                             <div class="palette__colors">
                                 <span class="palette__square" style="background-color: #8ecae6;"></span>
@@ -94,13 +94,13 @@
 
                         <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="name">Nombre completo</label>
-                            <input class="collapsible__input js_input js_name" type="text" id="name"
+                            <input class="collapsible__input js_input js_name" type="text" name="field2" id="field2"
                                 placeholder="Ej: Sally Jill">
                         </div>
 
                         <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="job">Profesión</label>
-                            <input class="collapsible__input js_input js_job" type="text" id="job"
+                            <input class="collapsible__input js_input js_job" type="text" name="field3" id="field3"
                                 placeholder="Ej: Front-end unicorn">
                         </div>
 
@@ -109,7 +109,8 @@
                                 <label class="collapsible__label" for="img-selector">Imagen de perfil</label>
                                 <div class="collapsible__input-group">
                                     <label class="collapsible__add_btn" for="img-selector">Añadir imagen</label>
-                                    <input class="hidden js__profile-upload-btn" type="file" id="img-selector">
+                                    <input class="hidden js__profile-upload-btn" type="file" name="photo"
+                                        id="img-selector">
                                     <span class="collapsible__preview-pic js__profile-preview"></span>
                                 </div>
                             </div>
@@ -117,25 +118,25 @@
 
                         <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="email">Email</label>
-                            <input class="collapsible__input js_input js_email" type="email" id="email"
+                            <input class="collapsible__input js_input js_email" name="field4" type="email" id="field4"
                                 placeholder="Ej: sally.jill@gmail.com">
                         </div>
 
                         <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="phone">Teléfono</label>
-                            <input class="collapsible__input js_input js_tel" type="tel" id="phone"
+                            <input class="collapsible__input js_input js_tel" name="field5" type="tel" id="field5"
                                 placeholder="Ej: 555-55-55-55">
                         </div>
 
                         <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="linkedin">LinkedIn</label>
-                            <input class="collapsible__input js_input js_linkedin" type="url" id="linkedin"
+                            <input class="collapsible__input js_input js_linkedin" name="field6" type="url" id="field6"
                                 placeholder="Ej: linkedin.com/in/sally-hill">
                         </div>
 
                         <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="github">GitHub</label>
-                            <input class="collapsible__input js_input js_github" type="url" id="github"
+                            <input class="collapsible__input js_input js_github" name="field7" type="url" id="field7"
                                 placeholder="Ej: github.com/sally-hill">
                         </div>
                     </div>
@@ -151,10 +152,11 @@
                     </legend>
 
                     <div class="collapsible__content js_collapsibleContent">
-                        <button type="button" class="collapsible__create_btn">
-                            <i class="fa-regular fa-address-card collapsible__icon_create_btn"></i>
+                        <button type="button" class="collapsible__create_btn js_createBtn"><i
+                                class="fa-regular fa-address-card collapsible__icon_create_btn"></i>
                             Crear tarjeta</button>
                     </div>
+                    <div class="share_result js__card_result"></div>
 
                 </fieldset>
 
@@ -165,7 +167,8 @@
         <!-- Tarjeta de previsualización -->
         <section class="preview-section">
             <div>
-                <button class="preview-btn" type="submit">Borrar tarjeta<i class="btn fa-solid fa-trash"></i></button>
+                <button class="js_preview-btn preview-btn" type="submit">Borrar<i
+                        class="btn fa-solid fa-trash"></i></button>
             </div>
             <div class="preview-card">
                 <h2 class="js_preview_name" id="preview-name">Nombre Apellido</h2>
@@ -212,6 +215,5 @@
 
     <script src="./js/main.js"></script>
 
-    <script src="./js/get-avatar.js"></script>
 
 </body>

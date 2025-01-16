@@ -1,0 +1,43 @@
+//botón de compartir en redes
+.share_result {
+    font-family: $fontfamily-subtitle;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+
+    &__title {
+        font-family: $fontfamily-title;
+        color: $secondary-color;
+    }
+
+    &__link {
+    color: black;
+    border: solid 0.5px $secondary-color;
+    padding: 1rem;
+    border-radius: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #01614c;
+      }
+    }
+
+    &__shareButton {
+    padding: 0.5em;
+    background-color: $primary-color;
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #fea014;
+      }
+    }
+}
