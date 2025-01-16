@@ -142,7 +142,7 @@ function handleClickCreate(ev) {
     //resultados y botón de envío de la tarjeta a una red social a nuestra elección 
       if (responseData.success === true) {
         cardResultSection.innerHTML = `
-        <a href="https://dev.adalab.es/api/info/${responseData.infoID}">https://dev.adalab.es/api/info/${responseData.infoID}</a>
+        <a class="share_result__link" href="https://dev.adalab.es/api/info/${responseData.infoID}">https://dev.adalab.es/api/info/${responseData.infoID}</a>
         <a class="share_result__shareButton" href="WEB_INTENT${responseData.infoID}">Compartir en Bluesky</a>
         `;
       } else {
