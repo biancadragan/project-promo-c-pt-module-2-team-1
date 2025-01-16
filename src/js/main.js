@@ -118,16 +118,22 @@ const designIcon = document.querySelector('.js_designIcon');
 const fillIcon = document.querySelector('.js_fillIcon');
 const shareIcon = document.querySelector('.js_shareIcon');
 
-const toggleCollapsible(icon) {
+const toggleCollapsible = (icon, fieldsetClass) => {
 
-    // Encuentra el contenedor del colapsable
-    const collapsibleContent = icon.closest('.collapsible').querySelector('.collapsible__content');
+    const fieldset = document.querySelector(fieldsetClass); // Selecciona la sección específica
+    const contents = fieldset.querySelectorAll('.js_collapsibleContent'); // Encuentra el contenido de la sección
 
     // Alternar la clase para mostrar/ocultar el contenido
-    collapsibleContent.classList.toggle('is-open');
+    contents.forEach(content => {
+        if (content) {
+            content.classList.toggle('is-open');
+        }
+    });
 
     // Cambiar el icono de caret
-    if (collapsibleContent.classList.contains('is-open')) {
+
+    debugger;
+    if (contents[0].classList.contains('is-open')) {
         icon.classList.remove('fa-caret-down');
         icon.classList.add('fa-caret-up');
     } else {
@@ -137,6 +143,6 @@ const toggleCollapsible(icon) {
 }
 
 // Añadir evento de clic para cada icono
-designIcon.addEventListener('click', () => toggleCollapsible(designIcon));
-fillIcon.addEventListener('click', () => toggleCollapsible(fillIcon));
-shareIcon.addEventListener('click', () => toggleCollapsible(shareIcon));
+designIcon.addEventListener('click', () => toggleCollapsible(designIcon, '.js_designFieldset'));
+fillIcon.addEventListener('click', () => toggleCollapsible(fillIcon, '.js_fillFieldset'));
+shareIcon.addEventListener('click', () => toggleCollapsible(shareIcon, '.js_shareFieldset'));

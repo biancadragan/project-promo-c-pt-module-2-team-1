@@ -29,15 +29,15 @@
             <form class="form js_form">
 
                 <!-- Colapsable 1: Diseña -->
-                <fieldset class="collapsible collapsible-design">
+                <fieldset class="collapsible collapsible-design js_designFieldset">
 
                     <legend class="collapsible__title">
-                        <img class=collapsible__image src="images/diseña.jpeg" alt="Logo de Diseña">
+                        <img class="collapsible__image" src="images/diseña.jpeg" alt="Logo de Diseña">
                         Diseña
                         <i class="fa-solid fa-caret-down collapsible__icon js_designIcon"></i>
                     </legend>
 
-                    <div class="collapsible__content">
+                    <div class="collapsible__content js_collapsibleContent">
 
                         <h3 class="collapsible__h3">Colores</h3>
 
@@ -82,25 +82,29 @@
                 </fieldset>
 
                 <!-- Colapsable 2: Rellena -->
-                <fieldset class="collapsible collapsible-fill">
+                <fieldset class="collapsible collapsible-fill js_fillFieldset">
 
-                    <legend class="collapsible__title"><img class=collapsible__image src="images/rellena.jpeg"
-                            alt="Logo de Rellena">
+                    <legend class="collapsible__title">
+                        <img class="collapsible__image" src="images/rellena.jpeg" alt="Logo de Rellena">
                         Rellena
                         <i class="fa-solid fa-caret-down collapsible__icon js_fillIcon"></i>
                     </legend>
+
                     <div class="collapsible__blocks">
-                        <div class="collapsible__content">
+
+                        <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="name">Nombre completo</label>
                             <input class="collapsible__input js_input js_name" type="text" id="name"
                                 placeholder="Ej: Sally Jill">
                         </div>
-                        <div class="collapsible__content">
-                            <label class="collapsible__label" for="job">Puesto</label>
+
+                        <div class="collapsible__content js_collapsibleContent">
+                            <label class="collapsible__label" for="job">Profesión</label>
                             <input class="collapsible__input js_input js_job" type="text" id="job"
                                 placeholder="Ej: Front-end unicorn">
                         </div>
-                        <div class="collapsible__content">
+
+                        <div class="collapsible__content js_collapsibleContent">
                             <div class="collapsible__imginput">
                                 <label class="collapsible__label" for="img-selector">Imagen de perfil</label>
                                 <div class="collapsible__input-group">
@@ -110,22 +114,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="collapsible__content">
+
+                        <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="email">Email</label>
                             <input class="collapsible__input js_input js_email" type="email" id="email"
                                 placeholder="Ej: sally.jill@gmail.com">
                         </div>
-                        <div class="collapsible__content">
+
+                        <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="phone">Teléfono</label>
                             <input class="collapsible__input js_input js_tel" type="tel" id="phone"
                                 placeholder="Ej: 555-55-55-55">
                         </div>
-                        <div class="collapsible__content">
+
+                        <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="linkedin">LinkedIn</label>
                             <input class="collapsible__input js_input js_linkedin" type="url" id="linkedin"
                                 placeholder="Ej: linkedin.com/in/sally-hill">
                         </div>
-                        <div class="collapsible__content">
+
+                        <div class="collapsible__content js_collapsibleContent">
                             <label class="collapsible__label" for="github">GitHub</label>
                             <input class="collapsible__input js_input js_github" type="url" id="github"
                                 placeholder="Ej: github.com/sally-hill">
@@ -135,14 +143,14 @@
                 </fieldset>
 
                 <!-- Colapsable 3: Comparte -->
-                <fieldset class="collapsible collapsible-share">
+                <fieldset class="collapsible collapsible-share js_shareFieldset">
                     <legend class="collapsible__title">
-                        <img class=collapsible__image src="images/comparte.jpeg" alt="Logo de Comparte">
+                        <img class="collapsible__image" src="images/comparte.jpeg" alt="Logo de Comparte">
                         Comparte
                         <i class="fa-solid fa-caret-down collapsible__icon js_shareIcon"></i>
                     </legend>
 
-                    <div class="collapsible__content">
+                    <div class="collapsible__content js_collapsibleContent">
                         <button type="button" class="collapsible__create_btn">
                             <i class="fa-regular fa-address-card collapsible__icon_create_btn"></i>
                             Crear tarjeta</button>
