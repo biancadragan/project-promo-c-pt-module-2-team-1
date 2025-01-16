@@ -138,7 +138,7 @@ function handleClickCreate(ev) {
     .then((responseData) => {
       console.log(responseData);
 
-      //resultados y botón de envío de la tarjeta a una red social a nuestra elección
+      //resultados y botón de envío de la tarjeta a una Bluesky
       if (responseData.success === true) {
         cardResultSection.innerHTML = `
         <h2 class="share_result__title">¡Aquí tienes el enlace a tu ProCard!</h2>
@@ -155,7 +155,7 @@ function handleClickCreate(ev) {
           .replace("field4", "email");
           .replace("field5", "teléfono");
           .replace("field6", "LinkedIn");
-          .replace("field6", "Github");
+          .replace("field7", "Github");
         cardResultSection.innerHTML = `
         <p>Desafortunadamente no se ha podido guardar la información</p>
         <p>${responseData.error}</p>
