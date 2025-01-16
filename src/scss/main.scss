@@ -4,20 +4,4 @@
 @import 'layout/footer';
 @import 'layout/header';
 @import 'components/create-card.scss';
-
-//botón de compartir en redes
-.share_result {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    align-items: center;
-
-    &__link {
-    color: blue;
-    }
-    &__shareButton {
-    padding: .5em;
-    background-color: orange;
-    color: white;
-    }
-}
+@import 'components/share-button.scss';

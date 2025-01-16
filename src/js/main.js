@@ -127,6 +127,8 @@ function handleClickCreate(ev) {
   console.log(data);
 
 //fetch con peticiones al servidor y promesas
+
+  data.field1 = parseInt(data.field1.replace("theme",''));
   fetch("https://dev.adalab.es/api/info/data", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -151,7 +153,7 @@ function handleClickCreate(ev) {
         <p>${responseData.error}</p>
         `;
       }
-    });
+    })
 
     .catch((error) => {
       console.error("Error al enviar los datos:", error);
