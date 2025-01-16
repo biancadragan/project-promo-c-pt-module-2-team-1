@@ -4,6 +4,7 @@ console.log(">> Ready :)");
 
 // Previsualización de tarjeta
 
+
 const themes = {
   theme1: {
     nameColor: "#264653",
@@ -25,7 +26,7 @@ const themes = {
 const previewName = document.querySelector(".js_preview_name");
 const previewJob = document.querySelector(".js_preview_job");
 const previewIcons = document.querySelectorAll(".js_previewIcon");
-const paletteInputs = document.querySelectorAll('input[name="theme"]');
+
 
 const applyTheme = (theme) => {
   previewName.style.color = theme.nameColor;
@@ -162,3 +163,36 @@ function handleClickCreate(ev) {
 
 //evento para que al hacer click ejecute la acción
 createBtn.addEventListener("click", handleClickCreate);
+//BORRAR LOS DATOS
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const resetButton = document.querySelector(".js_preview-btn");
+    const profileImage = document.querySelector(".js__profile-image");
+    const profilePreview = document.querySelector('.js__profile-preview');
+
+    resetButton.addEventListener("click", (ev) => {
+        ev.preventDefault(); // Evita que el formulario haga un reset automático
+
+        // Restablecer los campos del formulario
+        form.reset();
+
+        // Restablecer la previsualización de la tarjeta
+        namePreview.textContent = "Nombre Apellido";
+        jobPreview.textContent = "Profesión";
+        profileImage.style.backgroundImage = "url('../images/Profile-pic.png')";
+        profilePreview.style.backgroundImage = "url('../images/Profile-pic.png')";
+
+        // Restablecer el tema por defecto
+        applyTheme(themes.theme1);
+
+
+    });
+});
+
+
+
+
+
+
+
