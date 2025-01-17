@@ -3,7 +3,7 @@
     font-family: $fontfamily-subtitle;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
     align-items: center;
 
     &__title {
@@ -39,5 +39,14 @@
     &:hover {
         background-color: #fea014;
       }
+    }
+
+    &__mandatory {
+      color: $primary-color;
+      border: solid 0.5px $secondary-color;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 15px;
+      text-align: center;
     }
 }

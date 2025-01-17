@@ -2,6 +2,8 @@
 
 console.log(">> Ready :)");
 
+import "./get-avatar.js";
+
 // Previsualización de tarjeta
 
 const themes = {
@@ -34,7 +36,6 @@ const applyTheme = (theme) => {
     });
 };
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const selectedTheme = document.querySelector(
         'input[name="field1"]:checked'
@@ -55,10 +56,7 @@ document.getElementById("palette3").addEventListener("change", () => {
     applyTheme(themes.theme3); // Aplica el tema 3
 });
 
-import "./get-avatar.js";
-
 // PREVIEW Section
-
 let data = {
     field1: "theme1",
     field2: "",
@@ -152,14 +150,14 @@ function handleClickCreate(ev) {
 
                 cardResultSection.innerHTML = `
         <h2 class="share_result__title">¡Aquí tienes el enlace a tu ProCard!</h2>
-        <p class="share_result__subtitle">Que la disfrutes &#x1F604</p>
+        <p>Que la disfrutes &#x1F604</p>
         <a class="share_result__link" href="${baseUrl}">${baseUrl}</a>
         <a class="share_result__shareButton" href="${blueskyUrl}" target="_blank">Compartir en Bluesky</a>
         `; //pinta un texto de confirmación y un enlace a Bluesky
 
             } else {
                 const errorEnCastellano = responseData.error
-                    .replace("Mandatory fields", "Campos obligatorios")
+                    .replace("Mandatory fields", "Campos obligatorios a rellenar")
                     .replace("field2", "nombre")
                     .replace("field3", "puesto")
                     .replace("field4", "email")
@@ -168,8 +166,10 @@ function handleClickCreate(ev) {
                     .replace("field7", "Github")
                     .replace("photo", "foto");
                 cardResultSection.innerHTML = `
-        <p>Desafortunadamente no se ha podido guardar la información</p>
-        <p>${errorEnCastellano}</p>
+        <h2 class="share_result__title">¡Oh, vaya! &#128517</h2>
+        <p class="share_result__subtitle">No se ha podido completar el proceso.</p>
+        <p class="share_result__subtitle">Vuelve a intentarlo, por favor &#128519</p>
+        <b class="share_result__mandatory">${errorEnCastellano}</b>
         `; //genera un mensaje de error si no se rellenan los campos necesarios para generar la tarjeta
             }
         })
