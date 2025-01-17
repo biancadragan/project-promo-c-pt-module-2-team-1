@@ -239,6 +239,8 @@ let clearData = (ev) => {
     // Restablecer el tema por defecto
     applyTheme(themes.theme1);
 
+    cardResultSection.innerHTML = "";
+
     localStorage.removeItem("data");
 };
 
