@@ -1,0 +1,148 @@
+// Sección del formulario 
+
+.collapsible {
+    width: 100%;
+    border: 1px solid $primary-color;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  
+    &__h3 {
+      font-family: $fontfamily-subtitle;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  
+    &__image {
+      height: 2rem;
+      margin-right: 1rem;
+      display: flex;
+      align-items: center;
+    }
+  
+    &__title {
+      font-family: $fontfamily-title;
+      font-weight: $fontweight-title-landing;
+      font-size: 1.5rem;
+      color: $primary-color;
+      background-color: white;
+      padding: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-right: 3rem;
+      border: 1px solid $primary-color;
+      border-radius: 15px;
+    }
+  
+    &__blocks {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__icon {
+      position: absolute;
+      right: 1rem;
+      font-size: 1.5rem;
+      color: $secondary-color;
+      transition: transform 0.3s ease;
+    }
+  
+    &__content {
+      display: none;
+    }
+  
+    &__content.is-open {
+      display: flex;
+      padding-inline: 1rem;
+      flex-direction: column;
+      font-family: $fontfamily-subtitle;
+    }
+  
+    &__imginput {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+  
+    &__label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+  
+    &__input {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid $secondary-color;
+      border-radius: 4px;
+    }
+  
+    &__add_btn {
+      background-color: $secondary-color;
+      font-weight: 700;
+      font-size: 15px;
+      color: white;
+      margin-top: 8px;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+      width: 50%;
+  
+      &:hover {
+        background-color: #006650;
+      }
+    }
+  
+    &__input-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    &__preview-pic {
+      width: 50px;
+      height: 50px;
+      margin-left: 15px;
+      border: solid 1px $primary-color;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+    &__create_btn {
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: $primary-color;
+      color: white;
+      width: 50%;
+      font-size: 1rem;
+      align-self: center;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      padding: 1rem 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-block: 2rem;
+  
+      &:hover {
+        background-color: #fea014;
+      }
+    }
+  
+    &__icon_create_btn {
+      margin-right: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  

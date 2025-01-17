@@ -1,0 +1,21 @@
+// Paletas de colores 
+
+.palette {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 1rem;
+    cursor: pointer;
+  
+    &__colors {
+      display: flex;
+      margin-left: 2rem;
+    }
+  
+    &__square {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
