@@ -18,7 +18,7 @@
     <script src="https://kit.fontawesome.com/1395535f34.js" crossorigin="anonymous"></script>
 </head>
 
-<load src="./partials/header.html" />
+<load src="./partials/layout/header.html" />
 
 <body>
     <main class="create-card__main">
@@ -28,175 +28,20 @@
 
             <form class="form js_form">
 
-                <!-- Colapsable 1: Diseña -->
-                <fieldset class="collapsible collapsible-design js_designFieldset">
-
-                    <legend class="collapsible__title">
-                        <img class="collapsible__image" src="images/diseña.jpeg" alt="Logo de Diseña">
-                        Diseña
-                        <i class="fa-solid fa-caret-down collapsible__icon js_designIcon"></i>
-                    </legend>
-
-                    <div class="collapsible__content js_collapsibleContent">
-
-                        <h3 class="collapsible__h3">Colores</h3>
-
-                        <label for="palette1" class="palette">
-
-                            <input type="radio" id="palette1" name="field1" value="theme1" checked>
-
-                            <div class="palette__colors">
-                                <span class="palette__square" style="background-color: #264653;"></span>
-                                <span class="palette__square" style="background-color: #2a9d8f;"></span>
-                                <span class="palette__square" style="background-color: #e9c46a;"></span>
-                            </div>
-
-                        </label>
-
-                        <label for="palette2" class="palette">
-
-                            <input type="radio" id="palette2" name="field1" value="theme2">
-
-                            <div class="palette__colors">
-                                <span class="palette__square" style="background-color: #f4a261;"></span>
-                                <span class="palette__square" style="background-color: #e76f51;"></span>
-                                <span class="palette__square" style="background-color: #d62828;"></span>
-                            </div>
-
-                        </label>
-
-                        <label for="palette3" class="palette">
-
-                            <input type="radio" id="palette3" name="field1" value="theme3">
-
-                            <div class="palette__colors">
-                                <span class="palette__square" style="background-color: #8ecae6;"></span>
-                                <span class="palette__square" style="background-color: #219ebc;"></span>
-                                <span class="palette__square" style="background-color: #023047;"></span>
-                            </div>
-
-                        </label>
-
-                    </div>
-
-                </fieldset>
-
-                <!-- Colapsable 2: Rellena -->
-                <fieldset class="collapsible collapsible-fill js_fillFieldset">
-
-                    <legend class="collapsible__title">
-                        <img class="collapsible__image" src="images/rellena.jpeg" alt="Logo de Rellena">
-                        Rellena
-                        <i class="fa-solid fa-caret-down collapsible__icon js_fillIcon"></i>
-                    </legend>
-
-                    <div class="collapsible__blocks">
-
-                        <div class="collapsible__content js_collapsibleContent">
-                            <label class="collapsible__label" for="name">Nombre completo</label>
-                            <input class="collapsible__input js_input js_name" type="text" name="field2" id="field2"
-                                placeholder="Ej: Sally Jill">
-                        </div>
-
-                        <div class="collapsible__content js_collapsibleContent">
-                            <label class="collapsible__label" for="job">Profesión</label>
-                            <input class="collapsible__input js_input js_job" type="text" name="field3" id="field3"
-                                placeholder="Ej: Front-end unicorn">
-                        </div>
-
-                        <div class="collapsible__content js_collapsibleContent">
-                            <div class="collapsible__imginput">
-                                <label class="collapsible__label" for="img-selector">Imagen de perfil</label>
-                                <div class="collapsible__input-group">
-                                    <label class="collapsible__add_btn" for="img-selector">Añadir imagen</label>
-                                    <input class="hidden js__profile-upload-btn" type="file" name="photo"
-                                        id="img-selector">
-                                    <span class="collapsible__preview-pic js__profile-preview"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="collapsible__content js_collapsibleContent">
-                            <label class="collapsible__label" for="email">Email</label>
-                            <input class="collapsible__input js_input js_email" name="field4" type="email" id="field4"
-                                placeholder="Ej: sally.jill@gmail.com">
-                        </div>
-
-                        <div class="collapsible__content js_collapsibleContent">
-                            <label class="collapsible__label" for="phone">Teléfono</label>
-                            <input class="collapsible__input js_input js_tel" name="field5" type="tel" id="field5"
-                                placeholder="Ej: 555-55-55-55">
-                        </div>
-
-                        <div class="collapsible__content js_collapsibleContent">
-                            <label class="collapsible__label" for="linkedin">LinkedIn</label>
-                            <input class="collapsible__input js_input js_linkedin" name="field6" type="url" id="field6"
-                                placeholder="Ej: linkedin.com/in/sally-hill">
-                        </div>
-
-                        <div class="collapsible__content js_collapsibleContent">
-                            <label class="collapsible__label" for="github">GitHub</label>
-                            <input class="collapsible__input js_input js_github" name="field7" type="url" id="field7"
-                                placeholder="Ej: github.com/sally-hill">
-                        </div>
-                    </div>
-
-                </fieldset>
-
-                <!-- Colapsable 3: Comparte -->
-                <fieldset class="collapsible collapsible-share js_shareFieldset">
-                    <legend class="collapsible__title">
-                        <img class="collapsible__image" src="images/comparte.jpeg" alt="Logo de Comparte">
-                        Comparte
-                        <i class="fa-solid fa-caret-down collapsible__icon js_shareIcon"></i>
-                    </legend>
-
-                    <div class="collapsible__content js_collapsibleContent">
-                        <button type="button" class="collapsible__create_btn js_createBtn"><i
-                                class="fa-regular fa-address-card collapsible__icon_create_btn"></i>
-                            Crear tarjeta</button>
-                    </div>
-                    <div class="share_result js__card_result"></div>
-
-                </fieldset>
-
+            <load src="./partials/components/diseña.html" />
+            <load src="./partials/components/rellena.html" />
+            <load src="./partials/components/comparte.html" />
+                
             </form>
 
         </section>
-
-        <!-- Tarjeta de previsualización -->
-        <section class="preview-section">
-            <div>
-                <button class="js_preview-btn preview-btn" type="submit">Borrar<i
-                        class="btn fa-solid fa-trash"></i></button>
-            </div>
-            <div class="preview-card">
-                <h2 class="js_preview_name" id="preview-name">Nombre Apellido</h2>
-                <p class="js_preview_job" id="preview-job">Profesión</p>
-                <div class="preview-image-container">
-                    <div class="preview-image js__profile-image"
-                        style="background-image: url('../images/Profile-pic.png');">
-                    </div>
-                </div>
-                <div class="preview-links">
-                    <a class="js_preview_email" href='' classid="preview-email">
-                        <i class="fa-regular fa-envelope js_previewIcon"></i>
-                    </a>
-                    <a class="js_preview_phone" href='' id="preview-phone">
-                        <i class="fa-solid fa-mobile-screen-button js_previewIcon"></i>
-                    </a>
-                    <a class="js_preview_linkedin" href='' target="_blank" id="linkedin-icon">
-                        <i class="fa-brands fa-linkedin js_previewIcon"></i>
-                    </a>
-                    <a class="js_preview_github" href='' target="_blank" id="github-icon">
-                        <i class="fa-brands fa-github js_previewIcon"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
+        
+        <load src="./partials/components/preview.html" />
+        
     </main>
 
-    <load src="./partials/footer.html" />
+    <load src="./partials/layout/footer.html" />
+
     <script src="./js/main.js"></script>
 
 </body>
