@@ -37,10 +37,26 @@ const applyTheme = (theme) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+    const SelectPreviewImage = document.querySelector('.js__profile-preview')
     const selectedTheme = document.querySelector(
         'input[name="field1"]:checked'
     ).value;
-    applyTheme(themes[selectedTheme]); // Aplica el tema basado en el radio seleccionado
+    const savedData = localStorage.getItem("data");
+    if (savedData) {
+        data = JSON.parse(savedData); // Convierte el JSON a un objeto
+    }
+    applyTheme(themes[data.field1]);
+
+    // applyTheme(themes[selectedTheme]); // Aplica el tema basado en el radio seleccionado
+    form.elements["field2"].value = data.field2;
+    form.elements["field3"].value = data.field3;
+    form.elements["field4"].value = data.field4;
+    form.elements["field5"].value = data.field5;
+    form.elements["field6"].value = data.field6;
+    form.elements["field7"].value = data.field7;
+
+    // Actualiza la previsualización
+    updatePreview();
 });
 
 // Event listeners para cada radio button
@@ -82,6 +98,8 @@ const handleInput = (ev) => {
     const field = ev.target.name; // ID del campo del formulario
     data[field] = ev.target.value; // Actualiza el objeto `data`
 
+    localStorage.setItem("data", JSON.stringify(data));
+
     // Llama a la función para actualizar la previsualización
     updatePreview();
 };
@@ -104,6 +122,9 @@ function updatePreview() {
     linkedInPreview.style.display = data.field6 ? "inline-block" : "none";
     githubPreview.setAttribute("href", data.field7 ? data.field7 : "");
     githubPreview.style.display = data.field7 ? "inline-block" : "none";
+
+   
+
 }
 
 // Escuchamos el evento `input` en el formulario
@@ -217,6 +238,8 @@ let clearData = (ev) => {
 
     // Restablecer el tema por defecto
     applyTheme(themes.theme1);
+
+    localStorage.removeItem("data");
 };
 
 btnDelete.addEventListener('click', clearData);
@@ -256,3 +279,7 @@ const toggleCollapsible = (icon, fieldsetClass) => {
 designIcon.addEventListener('click', () => toggleCollapsible(designIcon, '.js_designFieldset'));
 fillIcon.addEventListener('click', () => toggleCollapsible(fillIcon, '.js_fillFieldset'));
 shareIcon.addEventListener('click', () => toggleCollapsible(shareIcon, '.js_shareFieldset'));
+
+
+
+

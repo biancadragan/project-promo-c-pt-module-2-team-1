@@ -7,6 +7,14 @@ const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
+// Recuperar imagen del LocalStorage al cargar la página
+function loadStoredImage() {
+  const storedImage = localStorage.getItem('profileImage');
+  if (storedImage) {
+      profileImage.style.backgroundImage = `url(${storedImage})`;
+      profilePreview.style.backgroundImage = `url(${storedImage})`;
+  }
+}
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -33,8 +41,13 @@ function writeImage() {
    * podemos pasarlo como background a la imagen de perfil y a la vista previa
    * de nuestro componente.
    */
+  const imageURL = fr.result;
+
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+
+  // Guardar en LocalStorage
+  localStorage.setItem('profileImage', imageURL);
 }
 
 
@@ -44,3 +57,5 @@ function writeImage() {
  * - al campo oculto para cuando cambie su value
  */
 fileField.addEventListener('change', getImage);
+
+loadStoredImage();
