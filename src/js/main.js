@@ -123,7 +123,7 @@ function updatePreview() {
     githubPreview.setAttribute("href", data.field7 ? data.field7 : "");
     githubPreview.style.display = data.field7 ? "inline-block" : "none";
 
-   
+
 
 }
 
@@ -234,7 +234,7 @@ let clearData = (ev) => {
     form.reset();
 
     // Limpiar la previsualización
-    updatePreview(data);
+    updatePreview();
 
     // Restablecer el tema por defecto
     applyTheme(themes.theme1);

@@ -11,8 +11,8 @@ const profilePreview = document.querySelector('.js__profile-preview');
 function loadStoredImage() {
   const storedImage = localStorage.getItem('profileImage');
   if (storedImage) {
-      profileImage.style.backgroundImage = `url(${storedImage})`;
-      profilePreview.style.backgroundImage = `url(${storedImage})`;
+    profileImage.style.backgroundImage = `url(${storedImage})`;
+    profilePreview.style.backgroundImage = `url(${storedImage})`;
   }
 }
 
@@ -24,7 +24,7 @@ function loadStoredImage() {
  * al tener los datos listos
  * @param {evento} e 
  */
-function getImage(e){
+function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
@@ -59,3 +59,11 @@ function writeImage() {
 fileField.addEventListener('change', getImage);
 
 loadStoredImage();
+
+const btnDeleteI = document.querySelector(".js_preview-btn");
+
+const clearDataI = (ev) => {
+  localStorage.removeItem('profileImage');
+}
+
+btnDeleteI.addEventListener('click', clearDataI);
