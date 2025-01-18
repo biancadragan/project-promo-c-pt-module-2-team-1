@@ -49,7 +49,7 @@ La aplicación está diseñada para ser intuitiva, rápida y adaptable a diferen
 </ol>
 
 <h1>Mira el proyecto terminado aquí:</h1>
-<p><a>//link github pages//</a></p>
-
+<a href="https://biancadragan.github.io/project-promo-c-pt-module-2-team-1/">Haz click &#129299</a>
+<p></p>
 <p><b>¡Gracias por tu interés en este proyecto! 💼✨</b></p>
 <p><em>Este proyecto ha sido creado por alumnas del bootcamp de Programación Web de Adalab.</em></p>
