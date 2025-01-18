@@ -37,10 +37,7 @@ const applyTheme = (theme) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    const SelectPreviewImage = document.querySelector('.js__profile-preview')
-    const selectedTheme = document.querySelector(
-        'input[name="field1"]:checked'
-    ).value;
+
     const savedData = localStorage.getItem("data");
     if (savedData) {
         data = JSON.parse(savedData); // Convierte el JSON a un objeto
@@ -209,8 +206,6 @@ createBtn.addEventListener("click", handleClickCreate);
 //BORRAR LOS DATOS
 
 const btnDelete = document.querySelector(".js_preview-btn");
-const profileImageReset = document.querySelector(".js__profile-image");
-const profilePreviewReset = document.querySelector(".js__profile-preview");
 
 let clearData = (ev) => {
     console.log("funciono");
@@ -226,8 +221,8 @@ let clearData = (ev) => {
         field7: "",
     };
 
-    profileImageReset.style.backgroundImage = "url('../images/Profile-pic.png')";
-    profilePreviewReset.style.backgroundImage =
+    profileImage.style.backgroundImage = "url('../images/Profile-pic.png')";
+    profilePreview.style.backgroundImage =
         "url('../images/Profile-pic.png')";
 
     // Limpiar el formulario
